@@ -1,0 +1,25 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow" />
+
+<style>
+	video, img{
+		max-width: 20%;
+		float:left;
+		min-width: 300px;
+	}
+</style>
+
+<h1>{{page.title}}</h1>
+
+{% for image in site.static_files %}
+	{% if image.path contains page.folder %}
+		{% if image.extname == '.jpg' %}
+			<a href="{{ site.baseurl }}{{ image.path }}"><img loading="lazy" src="{{ site.baseurl }}{{ image.path }}"/></a>
+		{% endif %}
+		{% if image.extname == '.mp4' %}
+			<video loading="lazy" width="320" height="240" controls loop muted>
+			<source loading="lazy" src="{{ site.baseurl }}{{ image.path }}" type="video/mp4">
+			</video>
+		{% endif %}
+	{% endif %}
+{% endfor %}

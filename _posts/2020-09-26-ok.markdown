@@ -1,0 +1,5 @@
+---
+layout: post
+title:  agnik naizcrebo
+folder: ok
+---
