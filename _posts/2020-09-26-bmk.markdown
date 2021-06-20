@@ -1,0 +1,5 @@
+---
+layout: post
+title:  atak sorazsem ragub
+folder: bmk
+---
