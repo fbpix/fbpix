@@ -19,6 +19,9 @@
 		{% if image.extname == '.gif' %}
 			<a href="{{ site.baseurl }}{{ image.path }}"><img loading="lazy" src="{{ site.baseurl }}{{ image.path }}"/></a>
 		{% endif %}
+		{% if image.extname == '.html' %}
+			<a href="{{ site.baseurl }}{{ image.path }}"><img loading="lazy" src="https://dummyimage.com/400x400&text=external"/></a>
+		{% endif %}
 		{% if image.extname == '.mp4' %}
 			<video loading="lazy" width="320" height="240" controls loop muted>
 			<source loading="lazy" src="{{ site.baseurl }}{{ image.path }}" type="video/mp4">
